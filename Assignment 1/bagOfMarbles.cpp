@@ -11,9 +11,11 @@ int main()
     int hand = 0;
     int addMarbles = 0;
 
-    cout << "how many marbles do you have?";
+    cout << "how many marbles do you have? ";
     cin >> hand;
-    cout << "You have " << hand << " marbles!";
+    //cout << "You have " << hand << " marbles!\n";
+    cout << "There are currently " << bag << " marbles in the bag.\nHow many would you like to add?";
+    cin >> addMarbles;
 
     return 0;
 }
