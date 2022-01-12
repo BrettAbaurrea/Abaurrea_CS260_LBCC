@@ -1,43 +1,46 @@
 #include <iostream>
+#include <string>
 
 //Declares what I need from the library
 using std::cin;
 using std::cout;
 using std::endl;
+using std::string;
 
 int main()
 {
-    int bag = 0;
-    int hand = 0;
+    int bag = 0;    //How many marbles in the bag
+    int hand = 0;   //How many marbles the user has
     int addMarbles = 0;
-    int i = 1;
+    int takeMarbels = 0;
+    int clear, multi, blue; //Marble options
+    int clearTot, multiTot, blueTot;    //Total amount of a specific color in the bag
+    int i = 1;  //counter
+    int choice;
     char quit;
-
-    cout << "how many marbles do you have? ";
-    cin >> hand;
-    //cout << "You have " << hand << " marbles!\n";
-    do{
-
-        cout << "There are currently " << bag << " marbles in the bag.\n\nHow many would you like to add? ";
-        cin >> addMarbles;
-        //i++;
-        if(addMarbles > hand){
-            cout << "\nSorry you don't have enough marbles\n";
-        }
-        else{
-            bag = bag + addMarbles;
-            hand = hand - addMarbles;
-        }
-        cout << "\nYou have " << hand << " marbles left.\n";
-        if (hand == 0){
-            cout << "Since you're out of marbles would you like to quit? Y/N  ";
-            cin >> quit;
-            if (quit == 'y' || quit == 'Y'){
-                i = 2;
-            }
-        }
-    }while(i==1);
     
+    do{
+        cout << "a marble bag sits infront of you...\n";
+        cout << "(1)ADD a marble\n(2)TAKE a marble\n(3)OPEN the bag:\t";
+        cin >> choice;
+        //add marble function
+        if (choice == 1){
+            do{
+                cout << "There are currently " << bag << " marbles in the bag.\n\nAre you adding a clear(1), multi-colored(2) or blue(3) marble? ";
+                cin >> choice;
+                //Clear Marble Option
+                if (choice == 1){
+                    cout << "How many CLEAR marbles are you adding to the bag? ";
+                    cin >> clear;
+                    bag = bag + clear;
+                    clearTot = clear + clearTot;
+                    cout << "There are " << bag << "  total marbles in the bag now, " << clearTot << " of which are clear.\n";
+                    cout << "\nWould you like to add more(1) or go to menu (0)? ";
+                    cin >> choice;
+                }
+            }while(choice==1);
+        }
 
+    }while (choice==0);
     return 0;
 }
