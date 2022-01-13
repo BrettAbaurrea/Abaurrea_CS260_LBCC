@@ -10,24 +10,22 @@ using std::string;
 int main()
 {
     int bag = 0;    //How many marbles in the bag
-    int hand = 0;   //How many marbles the user has
     int addMarbles = 0;
     int takeMarbels = 0;
-    int clear, multi, blue; //Marble options
-    int clearTot, multiTot, blueTot;    //Total amount of a specific color in the bag
+    int clear = 0, multi = 0, blue = 0; //Marble options
+    int clearTot = 0, multiTot = 0, blueTot = 0;    //Total amount of a specific color in the bag
     int i = 1;  //counter
     int choice;
-    char quit;
     
     do{
         
-        cout << "a marble bag sits infront of you...\n";
+        cout << "\na marble bag sits infront of you...\n";
         cout << "(1)ADD a marble\n(2)TAKE a marble\n(3)OPEN the bag:\t";
         cin >> choice;
-        //add marble function
+        //add marble to bag
         if (choice == 1){
             do{
-                cout << "There are currently " << bag << " marbles in the bag.\n\nAre you adding a clear(1), multi-colored(2) or blue(3) marble? ";
+                cout << "\nThere are currently " << bag << " marbles in the bag.\n\nAre you adding a clear(1), multi-colored(2) or blue(3) marble? ";
                 cin >> choice;
                 //Clear Marble Option
                 if (choice == 1){
@@ -35,7 +33,7 @@ int main()
                     cin >> clear;
                     bag = bag + clear;
                     clearTot = clear + clearTot;
-                    cout << "There are " << bag << "  total marbles in the bag now, " << clearTot << " of which are clear.\n";
+                    cout << "\nThere are " << bag << "  total marbles in the bag now, " << clearTot << " of which are clear.\n";
                     cout << "\nWould you like to add more(1) or go to menu (0)? ";
                     cin >> i;
                 }
@@ -45,7 +43,7 @@ int main()
                     cin >> multi;
                     bag = bag + multi;
                     multiTot = multi + multiTot;
-                    cout << "There are " << bag << "  total marbles in the bag now, " << multiTot << " of which are multi-colored.\n";
+                    cout << "\nThere are " << bag << "  total marbles in the bag now, " << multiTot << " of which are multi-colored.\n";
                     cout << "\nWould you like to add more(1) or go to menu (0)? ";
                     cin >> i;
                 }
@@ -55,7 +53,7 @@ int main()
                     cin >> blue;
                     bag = bag + blue;
                     blueTot = blue + blueTot;
-                    cout << "There are " << bag << "  total marbles in the bag now, " << blueTot << " of which are blue.\n";
+                    cout << "\nThere are " << bag << "  total marbles in the bag now, " << blueTot << " of which are blue.\n";
                     cout << "\nWould you like to add more(1) or go to menu (0)? ";
                     cin >> i;
                 }
