@@ -20,7 +20,7 @@ int main()
     do{
         
         cout << "\na marble bag sits infront of you...\n";
-        cout << "(1)ADD a marble\n(2)TAKE a marble\n(3)OPEN the bag:\t";
+        cout << "(1)ADD a marble\n(2)TAKE a marble\n(3)OPEN the bag\n(0)QUIT:\t";
         cin >> choice;
         //add marble to bag
         if (choice == 1){
