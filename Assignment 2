@@ -1,6 +1,18 @@
 Functions & Values Needed for a Queue
-
-
-
+  Function to track the start/first in
+    Starting Point Value
+  Function to track the end/last in
+    Ending Point Value
+  Function to track the order everything (When something gets inputted assign it a value, and keep track of the values immediately before and after it to make sure it all stays in order.
+    Before/After Current Point value
+  
 
 Functions & Values Needed for Lists
+  Function to get start of list
+    Start Point Value
+  Function to get End of List
+    End Point Value
+  Function to add stuff to List
+    New List Item Value
+  Function to move throughout the list
+    Current List Item Value
