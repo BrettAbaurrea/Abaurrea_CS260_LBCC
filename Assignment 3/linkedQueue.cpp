@@ -13,6 +13,7 @@ struct Queue{
 //First in queue is nothing. End of queue gets initialized as first
 Queue *head = nullptr;
 Queue *tail = head;
+Queue *temp;    //Temporary placeholder
 
 void enqueue(int val){
 
