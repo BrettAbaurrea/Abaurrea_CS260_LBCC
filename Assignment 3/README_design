@@ -1,0 +1,25 @@
+Purpose:
+  program creates a queue using user generated input.
+  program can also remove items in the queue
+  
+  
+Queue
+
+  Head == start of queue
+  Tail == end of queue
+  currentItem == current position in the queue
+  val == variable for user input
+
+Program: "Enter a value for queue size: "
+User: 'enters integer (val)'
+Program: for (i = 0; i < val; i++){
+             add a digit to the end of the queue, constantly 
+             replacing the tail with a new integer to increase 
+             the queue length via the end of queue
+             "Current Value: Queue[i]"
+Program: "Remove how many from queue?"
+User: 'enters integer (val)'
+Program: for (i = 0; i < val; i++){
+              remove a digit from the front of the queue and shift 
+              all other data up one in the queue
+              "Value Removed: Queue[i]"
