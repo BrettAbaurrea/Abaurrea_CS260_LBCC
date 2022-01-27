@@ -36,12 +36,31 @@ void enqueue(int val){
     }
 }
 
+void dequeue(int val){
+
+    for (int i = 0; i < val; ++i){
+        if (head == nullptr){
+            cout << "Unfortunately there are no items to remove";
+            return;
+        }
+        else{
+
+        }
+    }
+
+}
+
 int main(){
 
     int val = 3; 
 
+    //Add items to queue
     cout << "how many would you like to enter? ";
     cin >> val;
-
     enqueue(val);
+
+    //Remove items from queue
+    cout << "how many items would you like to remove? ";
+    cin >> val;
+    dequeue(val);
 }
