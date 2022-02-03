@@ -23,3 +23,7 @@ Program: for (i = 0; i < val; i++){
               remove a digit from the front of the queue and shift 
               all other data up one in the queue
               "Value Removed: Queue[i]"
+              
+              [maybe: head->nullptr
+                      queue[i] = head
+                      tail -> next]
