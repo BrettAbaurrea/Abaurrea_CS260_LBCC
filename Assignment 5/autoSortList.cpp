@@ -10,7 +10,8 @@
 #include <string>
 #include "nodeStruct.cpp"
 
-using std:: string;
+using std::string;
+using std::to_string;
 
 //Auto Sorted List
 class AutoSort{
@@ -45,9 +46,9 @@ class AutoSort{
             Node *current = front;
             while (current != nullptr){
                 result = result + to_string(current->value) + ", ";
-                surrent = current->next;
+                current = current->next;
             }
-
-            return result
+            //Output list sorted
+            return result;
         }
 };
