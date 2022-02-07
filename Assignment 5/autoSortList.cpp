@@ -38,4 +38,16 @@ class AutoSort{
                 front = newNode;
             }
         }
-}
+
+        string printScreen(){
+            string result = "";
+
+            Node *current = front;
+            while (current != nullptr){
+                result = result + to_string(current->value) + ", ";
+                surrent = current->next;
+            }
+
+            return result
+        }
+};
