@@ -24,4 +24,18 @@ class AutoSort{
             //Set front of "list" to nothing to start
             front = nullptr;
         }
+        //Add a value
+        void add(int newValue){
+            //Insert value when empty
+            if (front==nullptr){
+                //put value into front position
+                Node * newNode = new Node{newValue, nullptr};
+                front = newNode;
+            }
+            //Insert value BEFORE front position
+            else if (newValue < front->value){  //if position is less than current position
+                Node * newNode = new Node{newValue, nullptr};
+                front = newNode;
+            }
+        }
 }
