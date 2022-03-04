@@ -5,7 +5,10 @@
 #include <iostream>
 #include <string>
 
-#include "node.cpp";
+#include "node.cpp"
+
+using std::string;
+using std::to_string;
 
 class AutoSorter{
     private:
@@ -24,7 +27,7 @@ class AutoSorter{
         AutoSorter(){
             front = nullptr;    //start with an empty list
         }
-        
+
         //insert a new value at a specific position
         void insertValue(int newValue){
             //empty list case
@@ -43,5 +46,15 @@ class AutoSorter{
                 Node *newNode = new Node{newValue, previousSpot -> next};
                 previousSpot -> next = newNode; //make the previousSpot the new value
             }
+        }
+        string printScreen(){
+            string result = "";
+
+            Node *current = front;
+            while(current != nullptr){
+                result = result + "" + to_string(current->value) + ", ";
+                current = current -> next;
+            }
+            return result;  //Display result on screen for user
         }
 };
