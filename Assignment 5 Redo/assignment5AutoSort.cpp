@@ -1,5 +1,7 @@
 /*
 * I belive this is pretty much what we did in classs
+* I attempted to use the atIndex function but couldn't get it working correctly
+* It just outputs -1 no matter what
 */
 
 #include <iostream>
@@ -46,6 +48,41 @@ class AutoSorter{
                 Node *newNode = new Node{newValue, previousSpot -> next};
                 previousSpot -> next = newNode; //make the previousSpot the new value
             }
+        }
+        void removeFirstInstance(int oldValue){
+            int currentValue = -1;
+
+            //remove from an empty list?
+            if (front == nullptr){  //if front is empty do this
+                currentValue = -2;
+            }
+            else if (front -> value == oldValue){   //if value at front is the same as oldValue, delete whatever is in the current position
+                Node *currentSpot = front;
+                currentValue = currentSpot -> value;
+                front = front -> next;
+                delete currentSpot;
+            }
+            else{
+                Node *previousSpot = findPrevious(oldValue);
+                Node *currentSpot = previousSpot -> next;
+                int currentValue = currentSpot -> value;
+                previousSpot -> next = currentSpot -> next;
+                delete currentSpot;
+            }
+        }
+        int atIndex(int valueIndex){
+            int count = 0;
+
+            Node *currentSpot = front;
+
+            while (currentSpot == NULL){
+                if (count == valueIndex){
+                    return currentSpot->value;
+                }
+                count++;
+                currentSpot = currentSpot -> next;
+            }
+            return -1;
         }
         string printScreen(){
             string result = "";
