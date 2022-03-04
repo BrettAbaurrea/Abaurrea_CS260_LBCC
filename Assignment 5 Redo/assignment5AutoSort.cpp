@@ -70,18 +70,10 @@ class AutoSorter{
                 delete currentSpot;
             }
         }
+        //Yeah, I have no idea how to use this search function
+        //I tried looking up tutorials and couldn't figure it out
+        //I added a description of what I want this function to do in my README document
         int atIndex(int valueIndex){
-            int count = 0;
-
-            Node *currentSpot = front;
-
-            while (currentSpot == NULL){
-                if (count == valueIndex){
-                    return currentSpot->value;
-                }
-                count++;
-                currentSpot = currentSpot -> next;
-            }
             return -1;
         }
         string printScreen(){

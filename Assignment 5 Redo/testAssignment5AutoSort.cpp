@@ -21,7 +21,7 @@ int main(){
     AutoSorter *autoSortedList = new AutoSorter();
     cout << "Current Auto Sorted List:  [ " << autoSortedList -> printScreen() << "]" << endl << endl;
 
-    
+
     while (continueTest < 4){
         //inserts user entered value and sorts it automatically
         while (continueTest == 1){
