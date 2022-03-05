@@ -24,7 +24,7 @@ int main(){
     */
 
    //intial age 
-   AgeNode *root = new AgeNode{30, nullptr. nullptr};   //average human is 28 (i rounded to 30 bc its prettier)
+   AgeNode *root = new AgeNode{30, nullptr, nullptr};   //average human is 28 (i rounded to 30 bc its prettier)
    //"level" 2
    AgeNode *ageUp = new AgeNode{40, nullptr, nullptr};  //moving up (left) gets you bigger number
    AgeNode *ageDown = new AgeNode{20, nullptr, nullptr};    //movie down (right) gets you a smaller number
@@ -70,9 +70,29 @@ int main(){
 
 
    //test to verify it all works
-   
+   cout << "avereage age (root) = " << root->value << endl;
+   //lv1
+   cout << "ageUp = " << root->up->value << endl;
+   cout << "ageDown = " << root->down->value << endl;
+   //lv2
+   cout << "ageUpUp = " << root->up->up->value << endl;
+   cout << "ageUpDown = " << root->up->down->value << endl;
+   cout << "ageDownUp = " << root->down->up->value << endl;
+   cout << "ageDownDown = " << root->down->down->value << endl;
+   //lv3
+   //up
+   cout << "ageUpUpUp = " << root->up->up->up->value << endl;
+   cout << "ageUpUpDown = " << root->up->up->down->value << endl;
+   cout << "ageUpDownUp = " << root->up->down->up->value << endl;
+   cout << "ageUpDownDown = " << root->up->down->down->value << endl;
+   //lv4
+   //down
+   cout << "ageDownDownDown = " << root->down->down->down->value << endl;
+   cout << "ageDownDownUp = " << root->down->down->up->value << endl;
+   cout << "ageDownUpDown = " << root->down->up->down->value << endl;
+   cout << "ageDownUpUp = " << root->down->up->up->value << endl;
 
-    //inOrderTraversal(root);
+    inOrderTraversal(root);
     cout << endl;
     
     return 0;
