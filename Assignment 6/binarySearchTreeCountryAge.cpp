@@ -14,10 +14,16 @@ void inOrderTraversal(AgeNode *root){
     cout << root -> value << ", ";
     inOrderTraversal(root -> down);
 }
+void addNode(AgeNode *root){
+    if (root == nullptr){
+        return "empty";
+    }
+    else if ()
+}
 
 int main(){
 
-    cout << "Let's find the average age of a country!\n\n";
+    cout << "\nLet's find the average age of a country!\n\n";
 
     /*
     * Declare AgeNode Values
@@ -45,7 +51,7 @@ int main(){
    AgeNode *ageDownUpDown = new AgeNode {23, nullptr, nullptr}; //less than 30 & 25 BUT larger than 20
    AgeNode *ageDownUpUp = new AgeNode {28, nullptr, nullptr};   //less than 30 BUT larger than 25 & 20
 
-   //Make sure nodes do the right thing
+   //Make nodes do the right thing
    //lv2
    root->up = ageUp;
    root->down = ageDown;
@@ -69,29 +75,29 @@ int main(){
    ageDownUp->down = ageDownUpDown;
 
 
-   //test to verify it all works
-   cout << "avereage age (root) = " << root->value << endl;
-   //lv1
-   cout << "ageUp = " << root->up->value << endl;
-   cout << "ageDown = " << root->down->value << endl;
-   //lv2
-   cout << "ageUpUp = " << root->up->up->value << endl;
-   cout << "ageUpDown = " << root->up->down->value << endl;
-   cout << "ageDownUp = " << root->down->up->value << endl;
-   cout << "ageDownDown = " << root->down->down->value << endl;
-   //lv3
-   //up
-   cout << "ageUpUpUp = " << root->up->up->up->value << endl;
-   cout << "ageUpUpDown = " << root->up->up->down->value << endl;
-   cout << "ageUpDownUp = " << root->up->down->up->value << endl;
-   cout << "ageUpDownDown = " << root->up->down->down->value << endl;
-   //lv4
-   //down
-   cout << "ageDownDownDown = " << root->down->down->down->value << endl;
-   cout << "ageDownDownUp = " << root->down->down->up->value << endl;
-   cout << "ageDownUpDown = " << root->down->up->down->value << endl;
-   cout << "ageDownUpUp = " << root->down->up->up->value << endl;
+//    //test to verify it all works
+//    cout << "avereage age (root) = " << root->value << endl;
+//    //lv2
+//    cout << "ageUp = " << root->up->value << endl;
+//    cout << "ageDown = " << root->down->value << endl;
+//    //lv3
+//    cout << "ageUpUp = " << root->up->up->value << endl;
+//    cout << "ageUpDown = " << root->up->down->value << endl;
+//    cout << "ageDownUp = " << root->down->up->value << endl;
+//    cout << "ageDownDown = " << root->down->down->value << endl;
+//    //lv4
+//    //up
+//    cout << "ageUpUpUp = " << root->up->up->up->value << endl;
+//    cout << "ageUpUpDown = " << root->up->up->down->value << endl;
+//    cout << "ageUpDownUp = " << root->up->down->up->value << endl;
+//    cout << "ageUpDownDown = " << root->up->down->down->value << endl;
+//    //down
+//    cout << "ageDownDownDown = " << root->down->down->down->value << endl;
+//    cout << "ageDownDownUp = " << root->down->down->up->value << endl;
+//    cout << "ageDownUpDown = " << root->down->up->down->value << endl;
+//    cout << "ageDownUpUp = " << root->down->up->up->value << endl;
 
+    cout << "Ages in order from oldest to youngest:\n";
     inOrderTraversal(root);
     cout << endl;
     
