@@ -14,6 +14,7 @@ void inOrderTraversal(AgeNode *root){
     cout << root -> value << ", ";
     inOrderTraversal(root -> down);
 }
+//add node function
 void addNode(AgeNode *&root, int count){    
     if (root == nullptr){   
         root = new AgeNode;    
