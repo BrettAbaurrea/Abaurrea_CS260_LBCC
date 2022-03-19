@@ -11,7 +11,7 @@ using std::string;
 using std::vector;
 
 struct RoadGraphNode{
-    string city;
+    string name;
     vector<RoadGraphNode *> neighbors;
     void addEdge(RoadGraphNode *destination){
         //checking for uniqueness
@@ -21,8 +21,8 @@ struct RoadGraphNode{
         string result = "";
         result += "Name: " + this->name + " {";
         for (auto neighbor: this->neighbors){
-            result += neighbors->name + ", ";
+            result += neighbor->name + ", ";
         }
         return result;  //display the graph to the user
     }
-}
+};
