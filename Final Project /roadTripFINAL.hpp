@@ -18,4 +18,6 @@ class RoadGraph{
         RoadGraphNode *addNode(string newName);
         RoadGraphNode *addNode(RoadGraphNode *newNode);
         string printScreen();
+        int minDist(int dist[], bool visit[]);
+        void shortPath(int RoadGraph[6][6], int source);
 };
